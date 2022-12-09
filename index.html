@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cubes</title>
+</head>
+<div class="container">
+    <h1>Cubes rotating</h1>
+    <div class="animation-container">
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+        <div class="cube">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-top"></div>
+            <div class="cube-face cube-face-bottom"></div>
+        </div>
+    </div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    h1 {
+        text-align: center;
+        color: gray;
+        font-size: 5rem;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .animation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 800px;
+    }
+    
+    .cube {
+        padding: 3rem;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 5s linear infinite;
+    }
+    
+    .cube-face {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+    
+    .cube-face-front {
+        transform: translateZ(75px);
+    }
+    
+    .cube-face-back {
+        transform: rotateY(180deg) translateZ(75px);
+    }
+    
+    .cube-face-left {
+        transform: rotateY(-90deg) translateZ(75px);
+    }
+    
+    .cube-face-right {
+        transform: rotateY(90deg) translateZ(75px);
+    }
+    
+    .cube-face-top {
+        transform: rotateX(90deg) translateZ(75px);
+    }
+    
+    .cube-face-bottom {
+        transform: rotateX(-90deg) translateZ(75px);
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+</style>
+
+</html>
